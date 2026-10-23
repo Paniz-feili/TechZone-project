@@ -1,8 +1,3 @@
-
-/* =========================
-   تنظیمات اصلی صفحه
-========================= */
-
 @font-face {
     font-family: vazirmatn;
     src: url("./fonts/Vazirmatn-Light.ttf");
@@ -51,10 +46,6 @@ img {
     max-width: 100%;
 }
 
-
-/* =========================
-   هدر و منوی سایت
-========================= */
 
 header {
     display: flex;
@@ -113,11 +104,6 @@ header h1 {
     background-color: var(--main-hover);
 }
 
-
-/* =========================
-   دکمه‌های عمومی
-========================= */
-
 button {
     border: none;
     border-radius: 8px;
@@ -127,8 +113,6 @@ button {
     transition: background-color 0.2s;
 }
 
-/* برای جلوگیری از نمایش دو کادر روی ورودی‌ها،
-   فقط دکمه‌ها و لینک‌ها این outline را می‌گیرند. */
 
 button:focus-visible,
 a:focus-visible {
@@ -136,10 +120,6 @@ a:focus-visible {
     outline-offset: 3px;
 }
 
-
-/* =========================
-   فوتر مشترک
-========================= */
 
 .site-footer {
     display: flex;
@@ -173,11 +153,6 @@ a:focus-visible {
 .site-footer a:hover {
     color: var(--main-color);
 }
-
-
-/* =========================
-   حالت تاریک بر اساس سیستم
-========================= */
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -213,11 +188,6 @@ a:focus-visible {
     }
 }
 
-
-
-/* =========================
-   تبلت
-========================= */
 
 @media (max-width: 1000px) {
     header {
@@ -266,11 +236,6 @@ a:focus-visible {
         height: 280px;
     }
 }
-
-
-/* =========================
-   موبایل
-========================= */
 
 @media (max-width: 768px) {
     header {
@@ -379,11 +344,6 @@ a:focus-visible {
     }
 }
 
-
-/* =========================
-   موبایل کوچک
-========================= */
-
 @media (max-width: 480px) {
     header {
         padding: 12px;
@@ -467,9 +427,6 @@ a:focus-visible {
     }
 }
 
-/* =========================
-   اصلاح چیدمان در پنجره‌های باریک
-========================= */
 
 @media (max-width: 900px) {
     .shop {
@@ -524,7 +481,6 @@ a:focus-visible {
     }
 }
 
-/* اصلاح نمایش فیلتر و محصولات در عرض کم */
 
 @media (max-width: 1000px) {
     .shop {
