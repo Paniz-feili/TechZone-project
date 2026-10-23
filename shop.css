@@ -1,0 +1,212 @@
+
+/* =========================
+   مسیر بالای صفحه
+========================= */
+
+.breadcrumb {
+    margin: 24px 32px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: var(--main-color);
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   عنوان و توضیحات صفحه فروشگاه
+========================= */
+
+body > h1 {
+    margin: 0 32px 8px;
+    font-size: 28px;
+}
+
+body > p:not(.breadcrumb) {
+    margin: 0 32px 24px;
+    color: var(--text-light);
+}
+
+
+/* =========================
+   چیدمان فروشگاه و فیلتر
+========================= */
+
+.shop {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 24px 32px 48px;
+}
+
+/* ستون فیلتر */
+
+.category {
+    width: 260px;
+    min-width: 260px;
+    padding: 24px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+
+.category h2,
+.category h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.category h3 {
+    margin-top: 24px;
+}
+
+.category label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.category input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--main-color);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* بخش محصولات */
+
+.products {
+    flex: 1;
+    min-width: 0;
+}
+
+/* جست‌وجو */
+
+.search {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.search::placeholder {
+    color: var(--text-light);
+}
+
+.search:focus {
+    outline: 2px solid #3182ce;
+    outline-offset: 1px;
+    border-color: #3182ce;
+}
+
+/* تعداد محصولات و مرتب‌سازی */
+
+.products-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.products-info p {
+    margin: 0;
+}
+
+
+/* =========================
+   کارت‌های محصولات
+========================= */
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.333% - 16px);
+    min-width: 200px;
+    max-width: calc(33.333% - 10.7px);
+    padding: 16px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    color: var(--text-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(32, 36, 56, 0.12);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 16px;
+    object-fit: contain;
+    background-color: var(--card-background);
+}
+
+.product-card h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.product-card p {
+    margin-top: 4px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.product-card p:last-child {
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .shop {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .category {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .products {
+        width: 100%;
+        min-width: 0;
+    }
+}

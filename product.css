@@ -1,0 +1,133 @@
+
+/* صفحه جزئیات محصولات */
+.all-products {
+    padding: 20px 30px;
+}
+
+.product-page {
+    display: none;
+}
+
+/* نمایش محصول انتخاب‌شده */
+body:not(:has(.product-page:target)) #product-1 {
+    display: block;
+}
+
+.product-page:target {
+    display: block;
+}
+
+/* اطلاعات محصول */
+.product-details {
+    display: flex;
+    gap: 30px;
+    padding: 25px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+/* تصاویر محصول */
+.product-images {
+    width: 40%;
+    min-width: 0;
+}
+
+.main-image {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background-color: var(--card-background);
+}
+
+.small-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.small-images img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+/* توضیحات محصول */
+.product-description {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-description h2 {
+    margin-bottom: 15px;
+}
+
+.product-description p {
+    margin-bottom: 15px;
+    line-height: 2;
+}
+
+.product-description .price {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* نظرات کاربران */
+.product-reviews {
+    margin-top: 30px;
+}
+
+.product-reviews h3 {
+    margin-bottom: 15px;
+}
+
+.review {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.review p {
+    margin-top: 8px;
+    line-height: 1.8;
+}
+
+/* نمایش در صفحه‌های کوچک‌تر */
+@media (max-width: 768px) {
+    .all-products {
+        padding: 15px;
+    }
+
+    .product-details {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .product-images {
+        width: 100%;
+    }
+
+    .main-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-image {
+        height: 220px;
+    }
+
+    .small-images {
+        flex-wrap: wrap;
+    }
+
+    .small-images img {
+        width: 55px;
+        height: 55px;
+    }
+}

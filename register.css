@@ -1,0 +1,101 @@
+
+/* =========================
+   فرم ثبت‌نام و ورود
+========================= */
+
+body > form {
+    width: 400px;
+    max-width: calc(100% - 48px);
+    margin: 24px auto 48px;
+    padding: 24px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+body > form h2 {
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+body > form > p {
+    margin-bottom: 24px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* هر ورودی و عنوان آن */
+
+.controller {
+    margin-bottom: 16px;
+}
+
+.controller label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.controller_input {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, outline-color 0.2s;
+}
+
+/* وقتی روی ورودی کلیک می‌کنیم */
+
+.controller_input:focus {
+    border-color: #3182ce;
+    outline: 2px solid #3182ce;
+    outline-offset: 1px;
+}
+
+/* ورودی معتبر */
+
+.controller_input:user-valid {
+    border-color: #269b68;
+}
+
+/* ورودی نامعتبر */
+
+.controller_input:user-invalid {
+    border-color: #d64545;
+}
+
+/* هنگام کلیک، فقط رنگ آبی نمایش داده شود */
+
+.controller_input:focus:user-valid,
+.controller_input:focus:user-invalid {
+    border-color: #3182ce;
+    outline-color: #3182ce;
+}
+
+/* دکمه‌های فرم */
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.buttons button {
+    flex: 1;
+}
+
+.buttons button[type="reset"] {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.buttons button[type="reset"]:hover {
+    background-color: var(--background);
+}
+
+
