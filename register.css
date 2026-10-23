@@ -1,8 +1,4 @@
 
-/* =========================
-   فرم ثبت‌نام و ورود
-========================= */
-
 body > form {
     width: 400px;
     max-width: calc(100% - 48px);
@@ -25,7 +21,6 @@ body > form > p {
     font-size: 14px;
 }
 
-/* هر ورودی و عنوان آن */
 
 .controller {
     margin-bottom: 16px;
@@ -48,7 +43,6 @@ body > form > p {
     transition: border-color 0.2s, outline-color 0.2s;
 }
 
-/* وقتی روی ورودی کلیک می‌کنیم */
 
 .controller_input:focus {
     border-color: #3182ce;
@@ -56,19 +50,16 @@ body > form > p {
     outline-offset: 1px;
 }
 
-/* ورودی معتبر */
 
 .controller_input:user-valid {
     border-color: #269b68;
 }
 
-/* ورودی نامعتبر */
 
 .controller_input:user-invalid {
     border-color: #d64545;
 }
 
-/* هنگام کلیک، فقط رنگ آبی نمایش داده شود */
 
 .controller_input:focus:user-valid,
 .controller_input:focus:user-invalid {
@@ -76,7 +67,6 @@ body > form > p {
     outline-color: #3182ce;
 }
 
-/* دکمه‌های فرم */
 
 .buttons {
     display: flex;
